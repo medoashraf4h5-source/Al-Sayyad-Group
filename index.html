@@ -1,0 +1,1633 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#09090A">
+  <meta name="color-scheme" content="dark">
+  <title>مجموعة الصياد للتطوير العقاري | شقق تمليك</title>
+  <meta name="description"
+    content="مجموعة الصياد للتطوير العقاري. تعرّف على مشاريع الشقق السكنية في شبرا الخيمة والتجمع، وشاهد المساحات والمواقع وتواصل مع فريق المبيعات.">
+
+  <!-- مهم قبل النشر: استبدل YOUR-DOMAIN.com بالدومين الحقيقي، وتأكد أن الصورة متاحة عبر HTTPS. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:site_name" content="مجموعة الصياد للتطوير العقاري">
+  <meta property="og:title" content="مجموعة الصياد للتطوير العقاري | شقق تمليك">
+  <meta property="og:description"
+    content="تعرّف على مشاريع مجموعة الصياد في شبرا الخيمة والتجمع، وتواصل مع فريق المبيعات مباشرة.">
+  <meta property="og:image" content="https://YOUR-DOMAIN.com/images/bahtim-tower.jpeg">
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #09090A;
+      --surface: #131316;
+      --surface-soft: rgba(255, 255, 255, .045);
+      --ink: #F3F0E8;
+      --muted: #B7B2A8;
+      --line: rgba(255, 255, 255, .13);
+      --accent: #D6B46C;
+      --accent-light: #F7E5B0;
+      --accent-ink: #17120A;
+      --wa: #25D366;
+      --wa-ink: #05200F;
+      --glass: linear-gradient(145deg, rgba(255, 255, 255, .10), rgba(255, 255, 255, .035));
+      --radius: 14px;
+      --page-gutter: clamp(16px, 4vw, 48px);
+      --font-display: "Cairo", "Segoe UI", Tahoma, sans-serif;
+      --font-body: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      position: relative;
+      isolation: isolate;
+      min-width: 0;
+      margin: 0;
+      padding-inline: var(--page-gutter);
+      color: var(--ink);
+      background: var(--bg);
+      font: 400 17px/1.8 var(--font-body);
+      overflow-wrap: break-word;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -10%;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(40% 35% at 85% 8%, rgba(214, 180, 108, .25), transparent 70%),
+        radial-gradient(45% 40% at 8% 38%, rgba(54, 120, 170, .18), transparent 70%),
+        radial-gradient(40% 35% at 72% 85%, rgba(214, 180, 108, .13), transparent 70%),
+        radial-gradient(35% 30% at 18% 96%, rgba(100, 70, 170, .13), transparent 70%);
+      filter: blur(28px);
+    }
+
+    img,
+    svg {
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    select {
+      cursor: pointer;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--accent-light);
+      outline-offset: 4px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1180px;
+      margin-inline: auto;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* الشريط العلوي */
+    .bar {
+      position: sticky;
+      top: env(safe-area-inset-top, 0px);
+      z-index: 20;
+      margin-inline: calc(-1 * var(--page-gutter));
+      padding-inline: var(--page-gutter);
+      background: rgba(10, 10, 14, .86);
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
+      backdrop-filter: blur(16px) saturate(140%);
+    }
+
+    .bar-inner {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-height: 76px;
+      padding-block: 10px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      flex: none;
+    }
+
+    .brand b {
+      display: block;
+      font: 800 1.1rem/1.25 var(--font-display);
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: .82rem;
+      line-height: 1.4;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-inline-start: auto;
+    }
+
+    .nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible {
+      color: var(--accent-light);
+    }
+
+    /* الأزرار */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 17px;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      text-decoration: none;
+      text-align: center;
+      font: 800 1rem/1.45 var(--font-body);
+      cursor: pointer;
+      transition: transform .2s ease, border-color .2s ease, filter .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-wa {
+      color: var(--wa-ink);
+      background: linear-gradient(180deg, #43E889, #20B85D);
+      box-shadow: 0 9px 24px -12px rgba(37, 211, 102, .65), inset 0 1px 0 rgba(255, 255, 255, .4);
+    }
+
+    .btn-wa:hover {
+      filter: brightness(1.06);
+    }
+
+    .btn-line {
+      color: var(--ink);
+      background: rgba(255, 255, 255, .045);
+      border-color: rgba(255, 255, 255, .2);
+    }
+
+    .btn-line:hover {
+      border-color: var(--accent);
+      color: var(--accent-light);
+    }
+
+    /* المقدمة */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: clamp(24px, 5vw, 64px);
+      align-items: end;
+      padding-block: clamp(46px, 7vw, 88px) clamp(30px, 4vw, 48px);
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+
+    .hero>* {
+      min-width: 0;
+    }
+
+    .skyline {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: .32;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: .94rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 27px;
+      height: 1px;
+      margin-inline-end: 9px;
+      vertical-align: middle;
+      background: var(--accent);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-display);
+    }
+
+    h1 {
+      max-width: 16ch;
+      margin: 12px 0 0;
+      font-size: clamp(2rem, 5vw, 3.65rem);
+      font-weight: 800;
+      line-height: 1.35;
+      text-wrap: balance;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--accent-light);
+      background: linear-gradient(100deg, #F7E5B0, #D6B46C 50%, #B88A3B);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-copy {
+      margin: 0 0 20px;
+      max-width: 48ch;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* أرقام سريعة */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-bottom: clamp(34px, 5vw, 56px);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--glass);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+    }
+
+    .stats>div {
+      min-width: 0;
+      padding: 22px 14px;
+      text-align: center;
+      border-inline-start: 1px solid var(--line);
+    }
+
+    .stats>div:first-child {
+      border-inline-start: 0;
+    }
+
+    .stats b {
+      display: block;
+      color: var(--accent-light);
+      font: 800 clamp(1.7rem, 4vw, 2.55rem)/1.25 var(--font-display);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stats span {
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    /* المشاريع والفلاتر */
+    .project-section {
+      scroll-margin-top: 100px;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+      line-height: 1.4;
+      text-wrap: balance;
+    }
+
+    .section-intro {
+      margin: 0;
+      max-width: 65ch;
+      color: var(--muted);
+    }
+
+    .filters {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      padding-block: 8px 22px;
+    }
+
+    .chip {
+      min-height: 42px;
+      padding: 8px 17px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, .045);
+      font-weight: 800;
+    }
+
+    .chip:hover {
+      color: var(--ink);
+      border-color: var(--accent);
+    }
+
+    .chip[aria-pressed="true"] {
+      color: var(--accent-ink);
+      background: linear-gradient(180deg, #E6C887, #C9A04F);
+      border-color: transparent;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      padding-bottom: clamp(48px, 7vw, 84px);
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .15);
+      border-radius: var(--radius);
+      background: var(--glass);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .10), 0 20px 48px -24px rgba(0, 0, 0, .8);
+      -webkit-backdrop-filter: blur(14px) saturate(135%);
+      backdrop-filter: blur(14px) saturate(135%);
+      transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(214, 180, 108, .55);
+      box-shadow: 0 24px 52px -22px rgba(0, 0, 0, .9), 0 0 34px -24px rgba(214, 180, 108, .6);
+    }
+
+    .card.feature {
+      grid-column: 1 / -1;
+    }
+
+    .pic {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #1a1a1d;
+    }
+
+    .feature .pic {
+      aspect-ratio: 2 / 1;
+    }
+
+    .pic>img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s ease;
+    }
+
+    .card:hover .pic>img {
+      transform: scale(1.035);
+    }
+
+    .pic::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 34%;
+      background: linear-gradient(transparent, rgba(7, 7, 10, .45));
+      pointer-events: none;
+    }
+
+    .pic.image-missing::before {
+      content: "الصورة غير متاحة";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      padding: 16px;
+      color: var(--muted);
+      background: #1a1a1d;
+    }
+
+    .pic.image-missing>img {
+      visibility: hidden;
+    }
+
+    .tag {
+      position: absolute;
+      inset-block-start: 13px;
+      inset-inline-start: 13px;
+      z-index: 2;
+      padding: 4px 11px;
+      border: 1px solid rgba(255, 255, 255, .19);
+      border-radius: 7px;
+      color: var(--ink);
+      background: rgba(10, 10, 14, .78);
+      font-size: .86rem;
+      font-weight: 800;
+      -webkit-backdrop-filter: blur(7px);
+      backdrop-filter: blur(7px);
+    }
+
+    .card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 16px;
+      min-width: 0;
+      padding: 21px;
+    }
+
+    .card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .card-head h3 {
+      margin: 0;
+      font-size: 1.42rem;
+      line-height: 1.4;
+    }
+
+    .loc {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .desc {
+      margin: 0;
+      color: var(--muted);
+      max-width: 65ch;
+    }
+
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(0, 0, 0, .2);
+    }
+
+    .specs>div {
+      min-width: 0;
+      padding: 10px 12px;
+      border-inline-start: 1px solid var(--line);
+    }
+
+    .specs>div:nth-child(odd) {
+      border-inline-start: 0;
+    }
+
+    .specs>div:nth-child(n+3) {
+      border-top: 1px solid var(--line);
+    }
+
+    .specs>div:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+
+    .specs dt {
+      color: var(--muted);
+      font-size: .82rem;
+      line-height: 1.5;
+    }
+
+    .specs dd {
+      margin: 2px 0 0;
+      font-weight: 800;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .cta .btn {
+      flex: 1 1 170px;
+    }
+
+    .result-count {
+      margin: -10px 0 16px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    /* باقي الأقسام */
+    .sec,
+    .inq {
+      padding-block: clamp(42px, 6vw, 74px);
+      border-top: 1px solid rgba(255, 255, 255, .09);
+      scroll-margin-top: 100px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      gap: clamp(24px, 5vw, 64px);
+      align-items: start;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.12rem;
+      max-width: 58ch;
+    }
+
+    .pillars {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--glass);
+    }
+
+    .pillars li {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      column-gap: 14px;
+      row-gap: 3px;
+      padding: 17px 19px;
+      border-top: 1px solid var(--line);
+    }
+
+    .pillars li:first-child {
+      border-top: 0;
+    }
+
+    .ico {
+      color: var(--accent);
+    }
+
+    .pillars .ico {
+      grid-row: 1 / 3;
+      margin-top: 4px;
+    }
+
+    .pillars b {
+      font: 800 1.08rem var(--font-display);
+    }
+
+    .pillars span {
+      color: var(--muted);
+    }
+
+    .why {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .why-i {
+      display: grid;
+      align-content: start;
+      gap: 10px;
+      min-width: 0;
+      padding: 21px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--glass);
+    }
+
+    .why-i h3 {
+      margin: 0;
+      font-size: 1.12rem;
+      line-height: 1.45;
+    }
+
+    .why-i p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .98rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: steps;
+    }
+
+    .steps li {
+      display: grid;
+      align-content: start;
+      gap: 7px;
+      min-width: 0;
+      padding-top: 15px;
+      border-top: 2px solid var(--line);
+      counter-increment: steps;
+    }
+
+    .steps li::before {
+      content: counter(steps);
+      color: var(--accent);
+      font: 800 1.9rem/1.2 var(--font-display);
+    }
+
+    .steps b {
+      font: 800 1.08rem var(--font-display);
+    }
+
+    .steps span {
+      color: var(--muted);
+    }
+
+    .faq {
+      display: grid;
+      gap: 10px;
+      max-width: 820px;
+    }
+
+    .faq details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--glass);
+    }
+
+    .faq details[open] {
+      border-color: rgba(214, 180, 108, .5);
+    }
+
+    .faq summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 15px 19px;
+      cursor: pointer;
+      font-weight: 800;
+      list-style: none;
+    }
+
+    .faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq summary::after {
+      content: "+";
+      flex: none;
+      color: var(--accent);
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .faq details[open] summary::after {
+      content: "−";
+    }
+
+    .faq p {
+      margin: 0;
+      padding: 0 19px 17px;
+      color: var(--muted);
+    }
+
+    /* نموذج الاستفسار */
+    .inq {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      gap: clamp(24px, 5vw, 72px);
+    }
+
+    .inq>* {
+      min-width: 0;
+    }
+
+    .inq h2 {
+      margin: 8px 0 0;
+      font-size: clamp(1.7rem, 3.6vw, 2.45rem);
+      line-height: 1.4;
+    }
+
+    .inq-intro {
+      max-width: 48ch;
+      color: var(--muted);
+    }
+
+    .num {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .num code {
+      direction: ltr;
+      unicode-bidi: isolate;
+      font: 800 1.2rem var(--font-display);
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--glass);
+    }
+
+    label {
+      display: grid;
+      gap: 5px;
+      font-weight: 800;
+      font-size: .95rem;
+    }
+
+    input,
+    select,
+    textarea {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      min-height: 45px;
+      padding: 10px 12px;
+      color: var(--ink);
+      background: rgba(8, 8, 10, .72);
+      border: 1px solid rgba(255, 255, 255, .19);
+      border-radius: 8px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #A8A39A;
+      opacity: 1;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent);
+    }
+
+    select option {
+      color: var(--ink);
+      background: #111114;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .two {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
+    }
+
+    .note {
+      margin: 0;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .copy-status {
+      min-height: 1.4em;
+      color: var(--accent-light);
+      font-size: .9rem;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-block: 24px;
+      border-top: 1px solid rgba(255, 255, 255, .09);
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .float-wa {
+      position: fixed;
+      inset-inline-end: 16px;
+      inset-block-end: calc(16px + env(safe-area-inset-bottom, 0px));
+      z-index: 30;
+      display: grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      color: var(--wa-ink);
+      background: linear-gradient(180deg, #43E889, #20B85D);
+      box-shadow: 0 12px 30px -9px rgba(37, 211, 102, .72);
+      text-decoration: none;
+      transition: transform .2s ease, filter .2s ease;
+    }
+
+    .float-wa:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
+
+    @media (max-width: 980px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .why {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 820px) {
+      html {
+        scroll-padding-top: 150px;
+      }
+
+      .bar-inner {
+        gap: 10px;
+      }
+
+      nav {
+        width: 100%;
+        margin-inline-start: 0;
+        gap: 9px 15px;
+      }
+
+      .hero,
+      .about,
+      .inq {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        gap: 18px;
+      }
+
+      .hero-copy {
+        margin-bottom: 16px;
+      }
+
+      .sec,
+      .inq,
+      .project-section {
+        scroll-margin-top: 150px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        font-size: 16px;
+      }
+
+      html {
+        scroll-padding-top: 180px;
+      }
+
+      .bar-inner {
+        padding-block: 9px;
+      }
+
+      .brand b {
+        font-size: 1rem;
+      }
+
+      nav {
+        gap: 8px 12px;
+      }
+
+      .nav-link {
+        font-size: .88rem;
+      }
+
+      nav .btn {
+        flex: 1 1 100%;
+      }
+
+      .hero {
+        padding-block: 36px 28px;
+      }
+
+      .hero-actions .btn {
+        flex: 1 1 100%;
+      }
+
+      .stats>div {
+        padding: 15px 7px;
+      }
+
+      .stats span {
+        font-size: .8rem;
+        line-height: 1.5;
+        display: block;
+      }
+
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+      }
+
+      .card.feature {
+        grid-column: auto;
+      }
+
+      .feature .pic {
+        aspect-ratio: 1 / 1;
+      }
+
+      .card-body {
+        padding: 17px;
+      }
+
+      .why,
+      .steps,
+      .two {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .specs>div {
+        padding: 9px 10px;
+      }
+
+      .cta .btn {
+        flex-basis: 100%;
+      }
+
+      form {
+        padding: 16px;
+      }
+
+      footer {
+        padding-bottom: 84px;
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero>div {
+        animation: rise .75s cubic-bezier(.2, .7, .2, 1) both;
+      }
+
+      .hero>div:nth-of-type(2) {
+        animation-delay: .1s;
+      }
+
+      .stats {
+        animation: rise .75s .18s cubic-bezier(.2, .7, .2, 1) both;
+      }
+
+      body::before {
+        animation: drift 24s ease-in-out infinite alternate;
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+      }
+
+      @keyframes drift {
+        to {
+          transform: translate3d(2%, -2%, 0) scale(1.04);
+        }
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    @media (hover: none) {
+
+      .card:hover,
+      .btn:hover,
+      .float-wa:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="bar">
+    <div class="wrap bar-inner">
+      <a class="brand" href="#top" aria-label="مجموعة الصياد للتطوير العقاري - الصفحة الرئيسية">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <rect width="40" height="40" rx="8" fill="var(--accent)" />
+          <path d="M9 31V17l7-5v19M16 31V9l8 5v17M24 31V19l7 4v8" fill="none" stroke="var(--accent-ink)"
+            stroke-width="2.2" stroke-linejoin="round" />
+        </svg>
+        <span><b>مجموعة الصياد</b><small>للتطوير العقاري</small></span>
+      </a>
+      <nav aria-label="التنقل الرئيسي">
+        <a class="nav-link" href="#projects">المشاريع</a>
+        <a class="nav-link" href="#about">من نحن</a>
+        <a class="nav-link" href="#faq">أسئلة شائعة</a>
+        <a class="nav-link" href="#inquire">استفسار</a>
+        <a class="btn btn-wa" id="navWa" href="https://wa.me/201224338495" target="_blank"
+          rel="noopener noreferrer">تواصل عبر واتساب</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <svg class="skyline" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMax slice" aria-hidden="true"
+        focusable="false">
+        <defs>
+          <linearGradient id="skg" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#D6B46C" stop-opacity=".9" />
+            <stop offset="1" stop-color="#D6B46C" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <g fill="none" stroke="url(#skg)" stroke-linejoin="round">
+          <path
+            d="M20 520V270h120V520M150 520V180h90V520M250 520V230h150V520M420 520V120h110V520M540 520V210h170V520M730 520V160h100V520M850 520V260h140V520M1005 520V190h110V520M1130 520V300h60V520"
+            stroke-width="1.4" />
+          <path
+            d="M20 296h120M20 322h120M20 348h120M20 374h120M20 400h120M20 426h120M20 452h120M20 478h120M20 504h120M44 270V520M68 270V520M92 270V520M116 270V520M150 206h90M150 232h90M150 258h90M150 284h90M150 310h90M150 336h90M150 362h90M150 388h90M150 414h90M150 440h90M150 466h90M150 492h90M174 180V520M198 180V520M222 180V520M250 256h150M250 282h150M250 308h150M250 334h150M250 360h150M250 386h150M250 412h150M250 438h150M250 464h150M250 490h150M250 516h150M274 230V520M298 230V520M322 230V520M346 230V520M370 230V520M420 146h110M420 172h110M420 198h110M420 224h110M420 250h110M420 276h110M420 302h110M420 328h110M420 354h110M420 380h110M420 406h110M420 432h110M420 458h110M420 484h110M420 510h110M444 120V520M468 120V520M492 120V520M516 120V520M540 236h170M540 262h170M540 288h170M540 314h170M540 340h170M540 366h170M540 392h170M540 418h170M540 444h170M540 470h170M540 496h170M564 210V520M588 210V520M612 210V520M636 210V520M660 210V520M684 210V520M730 186h100M730 212h100M730 238h100M730 264h100M730 290h100M730 316h100M730 342h100M730 368h100M730 394h100M730 420h100M730 446h100M730 472h100M730 498h100M754 160V520M778 160V520M802 160V520M850 286h140M850 312h140M850 338h140M850 364h140M850 390h140M850 416h140M850 442h140M850 468h140M850 494h140M874 260V520M898 260V520M922 260V520M946 260V520M970 260V520M1005 216h110M1005 242h110M1005 268h110M1005 294h110M1005 320h110M1005 346h110M1005 372h110M1005 398h110M1005 424h110M1005 450h110M1005 476h110M1005 502h110M1029 190V520M1053 190V520M1077 190V520M1101 190V520M1130 326h60M1130 352h60M1130 378h60M1130 404h60M1130 430h60M1130 456h60M1130 482h60M1130 508h60M1154 300V520M1178 300V520"
+            stroke-width=".7" opacity=".55" />
+        </g>
+      </svg>
+      <div>
+        <div class="eyebrow">شقق سكنية تمليك · شبرا الخيمة · التجمع</div>
+        <h1 id="hero-title">شقق بمواقع مميزة، <em>مبنية لتدوم.</em></h1>
+      </div>
+      <div>
+        <p class="hero-copy">تصفّح مشاريعنا الحالية، وشوف مساحات الشقق ومواقعها، وتواصل مع فريق المبيعات مباشرة عبر
+          واتساب.</p>
+        <div class="hero-actions">
+          <a class="btn btn-wa" id="heroWa" href="https://wa.me/201224338495" target="_blank"
+            rel="noopener noreferrer">تحدث معنا على واتساب</a>
+          <a class="btn btn-line" href="#projects">شاهد المشاريع</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="لمحة سريعة عن المجموعة">
+      <div><b dir="ltr">20</b><span>سنه خبرة</span></div>
+      <div><b dir="ltr">600+</b><span>عميل</span></div>
+      <div><b dir="ltr">30%</b><span>مقدم والباقي على 4 سنوات</span></div>
+    </section>
+
+    <section class="project-section" id="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <div class="eyebrow">مشاريعنا</div>
+        <h2 class="section-title" id="projects-title">اختار المشروع المناسب لك</h2>
+        <p class="section-intro">قارن بين المواقع والمساحات</p>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="تصفية المشاريع حسب المنطقة">
+        <button type="button" class="chip" data-filter="الكل" aria-pressed="true">كل المشاريع</button>
+        <button type="button" class="chip" data-filter="شبرا الخيمة" aria-pressed="false">شبرا الخيمة</button>
+        <button type="button" class="chip" data-filter="التجمع" aria-pressed="false">التجمع</button>
+      </div>
+      <p class="result-count" id="resultCount" aria-live="polite">عدد المشاريع: 4</p>
+      <div class="grid" id="grid">
+        <article class="card feature" data-project="bahtim-tower" data-area="شبرا الخيمة">
+          <div class="pic">
+            <img src="images/bahtim-tower.jpeg" alt="صورة مشروع برج بهتيم السكني" width="1000" height="700"
+              loading="lazy" decoding="async">
+            <span class="tag">قيد الإنشاء</span>
+          </div>
+          <div class="card-body">
+            <div class="card-head">
+              <div>
+                <h3>برج بهتيم</h3>
+                <div class="loc">شارع بهتيم العمومي، شبرا الخيمة</div>
+              </div>
+            </div>
+            <p class="desc">برج سكني على شارع بهتيم العمومي في شبرا الخيمة، على بُعد دقيقتين فقط من نزلة الدائري. شقق
+              أمامية وخلفية بمساحات متنوعة.</p>
+            <dl class="specs">
+              <div>
+                <dt>النوع</dt>
+                <dd>شقق تمليك</dd>
+              </div>
+              <div>
+                <dt>الشقق الأمامية</dt>
+                <dd>130، 165، 180 م²</dd>
+              </div>
+              <div>
+                <dt>الشقق الخلفية</dt>
+                <dd>125، 160، 165 م²</dd>
+              </div>
+              <div>
+                <dt>المسافة</dt>
+                <dd>دقيقتان من نزلة الدائري</dd>
+              </div>
+            </dl>
+            <div class="cta">
+              <a class="btn btn-wa project-wa" data-action="details" href="https://wa.me/201224338495" target="_blank"
+                rel="noopener noreferrer">استفسر عبر واتساب</a>
+              <a class="btn btn-line project-wa" data-action="visit" href="https://wa.me/201224338495" target="_blank"
+                rel="noopener noreferrer">احجز زيارة</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-project="j224" data-area="التجمع">
+          <div class="pic">
+            <img src="images/j224.jpeg" alt="صورة مشروع J224 في بيت الوطن بالتجمع" width="800" height="800"
+              loading="lazy" decoding="async">
+            <span class="tag">قيد الإنشاء</span>
+          </div>
+          <div class="card-body">
+            <div class="card-head">
+              <div>
+                <h3><bdi>J224</bdi></h3>
+                <div class="loc">الحي الثاني، بيت الوطن، التجمع</div>
+              </div>
+            </div>
+            <p class="desc">عمارة سكنية في الحي الثاني ببيت الوطن بالتجمع، بشقق أمامية وخلفية.</p>
+            <dl class="specs">
+              <div>
+                <dt>النوع</dt>
+                <dd>شقق تمليك</dd>
+              </div>
+              <div>
+                <dt>الشقق الأمامية</dt>
+                <dd>174 م²</dd>
+              </div>
+              <div>
+                <dt>الشقق الخلفية</dt>
+                <dd>126 م²</dd>
+              </div>
+              <div>
+                <dt>الموقع</dt>
+                <dd>الحي الثاني، بيت الوطن</dd>
+              </div>
+            </dl>
+            <div class="cta">
+              <a class="btn btn-wa project-wa" data-action="details" href="https://wa.me/201224338495" target="_blank"
+                rel="noopener noreferrer">استفسر عبر واتساب</a>
+              <a class="btn btn-line project-wa" data-action="visit" href="https://wa.me/201224338495" target="_blank"
+                rel="noopener noreferrer">احجز زيارة</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-project="j290" data-area="التجمع">
+          <div class="pic">
+            <img src="images/j290.jpeg" alt="صورة مشروع J290 في بيت الوطن بالتجمع" width="800" height="800"
+              loading="lazy" decoding="async">
+            <span class="tag">قيد الإنشاء</span>
+          </div>
+          <div class="card-body">
+            <div class="card-head">
+              <div>
+                <h3><bdi>J290</bdi></h3>
+                <div class="loc">الحي الثاني، بيت الوطن، التجمع</div>
+              </div>
+            </div>
+            <p class="desc">عمارة سكنية في الحي الثاني ببيت الوطن بالتجمع، بمساحات متنوعة للشقق.</p>
+            <dl class="specs">
+              <div>
+                <dt>النوع</dt>
+                <dd>شقق تمليك</dd>
+              </div>
+              <div>
+                <dt>المساحات</dt>
+                <dd>156، 170، 187 م²</dd>
+              </div>
+              <div>
+                <dt>الموقع</dt>
+                <dd>الحي الثاني، بيت الوطن</dd>
+              </div>
+            </dl>
+            <div class="cta">
+              <a class="btn btn-wa project-wa" data-action="details" href="https://wa.me/201224338495" target="_blank"
+                rel="noopener noreferrer">استفسر عبر واتساب</a>
+              <a class="btn btn-line project-wa" data-action="visit" href="https://wa.me/201224338495" target="_blank"
+                rel="noopener noreferrer">احجز زيارة</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-project="e81" data-area="التجمع">
+          <div class="pic">
+            <img src="images/e81.jpeg" alt="صورة مشروع E81 في الحي الخامس ببيت الوطن" width="800" height="800"
+              loading="lazy" decoding="async">
+            <span class="tag">متاح الآن</span>
+          </div>
+          <div class="card-body">
+            <div class="card-head">
+              <div>
+                <h3><bdi>E81</bdi></h3>
+                <div class="loc">الحي الخامس، بيت الوطن، بجوار Palm Hills</div>
+              </div>
+            </div>
+            <p class="desc">عمارة سكنية في الحي الخامس ببيت الوطن بالتجمع، بجوار Palm Hills.</p>
+            <dl class="specs">
+              <div>
+                <dt>النوع</dt>
+                <dd>شقق تمليك</dd>
+              </div>
+              <div>
+                <dt>الموقع</dt>
+                <dd>الحي الخامس، بيت الوطن</dd>
+              </div>
+              <div>
+                <dt>علامة قريبة</dt>
+                <dd><bdi>Palm Hills</bdi></dd>
+              </div>
+            </dl>
+            <div class="cta">
+              <a class="btn btn-wa project-wa" data-action="details" href="https://wa.me/201224338495" target="_blank"
+                rel="noopener noreferrer">استفسر عبر واتساب</a>
+              <a class="btn btn-line project-wa" data-action="visit" href="https://wa.me/201224338495" target="_blank"
+                rel="noopener noreferrer">احجز زيارة</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="note">المساحات وأنظمة السداد وحالة التوافر قابلة للتحديث؛ يُرجى التأكد من التفاصيل الحالية مع فريق
+        المبيعات قبل الحجز.</p>
+    </section>
+
+    <section class="sec" id="about" aria-labelledby="about-title">
+      <div class="section-head">
+        <div class="eyebrow">من نحن</div>
+        <h2 class="section-title" id="about-title">20 سنه من الخبرة في البناء والتطوير العقاري</h2>
+      </div>
+      <div class="about">
+        <p class="lead">مجموعة الصياد للتطوير العقاري شركة تبني وتطوّر مشاريع سكنية في شبرا الخيمة والتجمع، وخدمت أكثر
+          من 600 عميل خلال 20 سنه. نبدأ باختيار الموقع، ونتابع التنفيذ في الموقع خطوة بخطوة، ونتعامل معك بوضوح من أول
+          رسالة حتى الاستلام.</p>
+        <ul class="pillars">
+          <li>
+            <svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" />
+              <circle cx="12" cy="10" r="2.4" />
+            </svg>
+            <b>اختيار الموقع</b><span>نختار أراضي قريبة من الطرق الرئيسية والخدمات، لأن الموقع يحدد قيمة الوحدة وراحة
+              السكن.</span>
+          </li>
+          <li>
+            <svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 21V8l7-4 7 4v13M9 21v-5h6v5M9 11h2M13 11h2" />
+            </svg>
+            <b>متابعة التنفيذ</b><span>نتابع أعمال البناء في الموقع مرحلة بعد مرحلة، من الأساسات حتى التسليم.</span>
+          </li>
+          <li>
+            <svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 12.5l5 5L20 6.5" />
+            </svg>
+            <b>وضوح في التعامل</b><span>نعرض لك المساحات والمواقع كما هي، ونجيب عن أسئلتك مباشرة.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec" id="why" aria-labelledby="why-title">
+      <div class="section-head">
+        <div class="eyebrow">لماذا الصياد</div>
+        <h2 class="section-title" id="why-title">أربعة أسباب تختار بها مشاريعنا</h2>
+      </div>
+      <div class="why">
+        <article class="why-i"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" />
+            <circle cx="12" cy="10" r="2.4" />
+          </svg>
+          <h3>مواقع سهلة الوصول</h3>
+          <p>برج بهتيم على بُعد دقيقتين فقط من نزلة الدائري، وعمارات بيت الوطن داخل التجمع.</p>
+        </article>
+        <article class="why-i"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />
+          </svg>
+          <h3>مساحات متنوعة</h3>
+          <p>شقق من 125 إلى 180 م² في برج بهتيم، لتناسب احتياجات مختلفة.</p>
+        </article>
+        <article class="why-i"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 5h16v11H9l-5 4z" />
+          </svg>
+          <h3>تواصل مباشر</h3>
+          <p>تواصل مع فريق المبيعات على واتساب للاستفسار عن المشروع والوحدات المتاحة.</p>
+        </article>
+        <article class="why-i"><svg class="ico" width="26" height="26" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12z" />
+            <circle cx="12" cy="12" r="2.8" />
+          </svg>
+          <h3>معاينة قبل القرار</h3>
+          <p>تواصل معنا لتحديد موعد زيارة وشاهد المشروع بنفسك قبل اتخاذ القرار.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="sec" id="steps" aria-labelledby="steps-title">
+      <div class="section-head">
+        <div class="eyebrow">خطوات التعامل</div>
+        <h2 class="section-title" id="steps-title">من أول رسالة حتى الاستلام</h2>
+      </div>
+      <ol class="steps">
+        <li><b>تواصل معنا</b><span>ابعت رسالة على واتساب باسم المشروع الذي يهمك.</span></li>
+        <li><b>نحدد الوحدة</b><span>نعرض عليك المساحات المتاحة ونساعدك في اختيار الأنسب.</span></li>
+        <li><b>زيارة الموقع</b><span>نحدد موعد زيارة لتشاهد المشروع على الطبيعة.</span></li>
+        <li><b>الحجز والمتابعة</b><span>بعد مراجعة التفاصيل، تتواصل مع فريق المبيعات لإتمام إجراءات الحجز.</span></li>
+      </ol>
+    </section>
+
+    <section class="sec" id="faq" aria-labelledby="faq-title">
+      <div class="section-head">
+        <div class="eyebrow">أسئلة شائعة</div>
+        <h2 class="section-title" id="faq-title">قبل أن تتواصل معنا</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>كيف أحجز زيارة للمشروع؟</summary>
+          <p>اضغط «احجز زيارة» في بطاقة المشروع، وسيفتح واتساب برسالة جاهزة. يُرجى تأكيد الموعد مع فريق المبيعات.</p>
+        </details>
+        <details>
+          <summary>ما مساحات الشقق في برج بهتيم؟</summary>
+          <p>وفق البيانات الحالية: الشقق الأمامية 130 و165 و180 م²، والشقق الخلفية 125 و160 و165 م². يُرجى التأكد من
+            المتاح وقت الاستفسار.</p>
+        </details>
+        <details>
+          <summary>ما نظام السداد؟</summary>
+          <p>المعلومات المعروضة حاليًا هي مقدم 30% والباقي على 4 سنوات. تواصل معنا للتأكد من تطبيق النظام على المشروع
+            والوحدة التي تختارها.</p>
+        </details>
+        <details>
+          <summary>كيف أسأل عن وحدة معينة؟</summary>
+          <p>ابعت لنا رسالة على واتساب باسم المشروع والمساحة التي تبحث عنها، وسنساعدك في معرفة التفاصيل المتاحة.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="inq" id="inquire" aria-labelledby="inquire-title">
+      <div>
+        <div class="eyebrow">الاستفسارات</div>
+        <h2 id="inquire-title">أخبرنا بما تبحث عنه.</h2>
+        <p class="inq-intro">املأ النموذج، وسيفتح واتساب برسالة جاهزة بالمعلومات التي كتبتها. لن تُرسل الرسالة إلا بعد
+          الضغط على إرسال داخل واتساب.</p>
+        <div class="num"><code id="numTxt" dir="ltr">+20 12 24338495</code><button class="btn btn-line" id="copyBtn"
+            type="button">نسخ الرقم</button></div>
+        <p class="copy-status" id="copyStatus" role="status" aria-live="polite"></p>
+      </div>
+      <form id="inquiryForm" autocomplete="on">
+        <div class="two">
+          <label for="fn">الاسم<input id="fn" name="name" autocomplete="name" maxlength="80"
+              placeholder="الاسم بالكامل"></label>
+          <label for="fproj">المشروع<select id="fproj" name="project">
+              <option value="لم أحدد بعد">لم أحدد بعد</option>
+              <option value="برج بهتيم">برج بهتيم</option>
+              <option value="J224">J224</option>
+              <option value="J290">J290</option>
+              <option value="E81">E81</option>
+            </select></label>
+        </div>
+        <label for="ft">أرغب في<select id="ft" name="interest">
+            <option>شراء وحدة</option>
+            <option>حجز زيارة</option>
+            <option>الاستثمار العقاري</option>
+          </select></label>
+        <label for="fm">الرسالة<textarea id="fm" name="message" maxlength="700"
+            placeholder="نوع الوحدة، المساحة، وأسئلتك..."></textarea></label>
+        <a class="btn btn-wa" id="formWa" href="https://wa.me/201224338495" target="_blank"
+          rel="noopener noreferrer">أرسل عبر واتساب</a>
+        <p class="note">يفتح واتساب في تبويب جديد.</p>
+      </form>
+    </section>
+  </main>
+
+  <a class="float-wa" id="floatWa" href="https://wa.me/201224338495" target="_blank" rel="noopener noreferrer"
+    aria-label="تواصل مع مجموعة الصياد عبر واتساب">
+    <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path
+        d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.6 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.4z" />
+    </svg>
+  </a>
+
+  <footer class="wrap"><span>© <span id="year">2026</span> مجموعة الصياد للتطوير العقاري</span><span>واتساب: <bdi
+        dir="ltr">+20 12 24338495</bdi></span></footer>
+  <script>
+    (() => {
+      'use strict';
+
+      // رقم واتساب بصيغة دولية من دون + أو مسافات.
+      const WA_NUMBER = '201224338495';
+      const whatsappUrl = (message = '') => {
+        const base = `https://wa.me/${WA_NUMBER}`;
+        return message ? `${base}?text=${encodeURIComponent(message)}` : base;
+      };
+
+      // إضافة رسائل جاهزة لأزرار كل مشروع؛ البطاقات نفسها موجودة في HTML لتظهر حتى لو تعطل JavaScript.
+      document.querySelectorAll('.card[data-project]').forEach((card) => {
+        const projectName = card.querySelector('h3')?.innerText.trim() || 'المشروع';
+        const projectLocation = card.querySelector('.loc')?.innerText.trim() || '';
+        card.querySelectorAll('.project-wa').forEach((link) => {
+          const message = link.dataset.action === 'visit'
+            ? `مرحباً مجموعة الصياد، أرغب في حجز زيارة إلى ${projectName}${projectLocation ? ` (${projectLocation})` : ''}.`
+            : `مرحباً مجموعة الصياد، أرغب في معرفة تفاصيل ${projectName}${projectLocation ? ` (${projectLocation})` : ''}.`;
+          link.href = whatsappUrl(message);
+        });
+      });
+
+      // فلترة المشاريع مع تحديث عدد النتائج وحالة الزر لقارئات الشاشة.
+      const filters = document.getElementById('filters');
+      const cards = Array.from(document.querySelectorAll('.card[data-area]'));
+      const resultCount = document.getElementById('resultCount');
+      if (filters) {
+        filters.addEventListener('click', (event) => {
+          const button = event.target.closest('button[data-filter]');
+          if (!button || !filters.contains(button)) return;
+          const selectedArea = button.dataset.filter;
+          filters.querySelectorAll('button[data-filter]').forEach((item) => {
+            item.setAttribute('aria-pressed', String(item === button));
+          });
+          let visibleCount = 0;
+          cards.forEach((card) => {
+            const show = selectedArea === 'الكل' || card.dataset.area === selectedArea;
+            card.hidden = !show;
+            if (show) visibleCount += 1;
+          });
+          if (resultCount) resultCount.textContent = `عدد المشاريع: ${visibleCount}`;
+        });
+      }
+
+      // إظهار بديل مفهوم عند فقد الصورة أو وجود خطأ في اسم الملف.
+      document.querySelectorAll('.pic img').forEach((img) => {
+        img.addEventListener('error', () => img.closest('.pic')?.classList.add('image-missing'));
+        if (img.complete && img.naturalWidth === 0) img.closest('.pic')?.classList.add('image-missing');
+      });
+
+      // نموذج واتساب: تحديث الرسالة عند الكتابة أو تغيير القوائم.
+      const formIds = ['fn', 'fproj', 'ft', 'fm'];
+      const formWa = document.getElementById('formWa');
+      const NONE = 'لم أحدد بعد';
+      const buildFormMessage = () => {
+        const values = {};
+        formIds.forEach((id) => {
+          const element = document.getElementById(id);
+          values[id] = element ? element.value.trim() : '';
+        });
+        let message = 'مرحباً مجموعة الصياد،';
+        if (values.fn) message += ` أنا ${values.fn}.`;
+        message += ` أرغب في: ${values.ft || 'الاستفسار عن مشروع'}`;
+        message += values.fproj === NONE || !values.fproj ? '.' : ` بخصوص ${values.fproj}.`;
+        if (values.fm) message += ` ${values.fm}`;
+        return message;
+      };
+      const updateFormLink = () => {
+        if (formWa) formWa.href = whatsappUrl(buildFormMessage());
+      };
+      formIds.forEach((id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.addEventListener('input', updateFormLink);
+          element.addEventListener('change', updateFormLink);
+        }
+      });
+      updateFormLink();
+
+      // روابط التواصل العامة.
+      const generalMessage = whatsappUrl('مرحباً مجموعة الصياد، أرغب في معرفة معلومات عن مشاريعكم.');
+      ['navWa', 'heroWa', 'floatWa'].forEach((id) => {
+        const link = document.getElementById(id);
+        if (link) link.href = generalMessage;
+      });
+
+      // السنة تتجدد تلقائياً.
+      const year = document.getElementById('year');
+      if (year) year.textContent = String(new Date().getFullYear());
+
+      // نسخ رقم الهاتف مع بديل للمتصفحات التي لا تدعم Clipboard API أو عند عدم استخدام HTTPS.
+      const copyButton = document.getElementById('copyBtn');
+      const copyStatus = document.getElementById('copyStatus');
+      if (copyButton) {
+        copyButton.addEventListener('click', async () => {
+          const phone = '+201224338495';
+          let copied = false;
+          try {
+            if (navigator.clipboard && window.isSecureContext) {
+              await navigator.clipboard.writeText(phone);
+              copied = true;
+            }
+          } catch (_) {
+            copied = false;
+          }
+          if (!copied) {
+            const fallback = document.createElement('textarea');
+            fallback.value = phone;
+            fallback.setAttribute('readonly', '');
+            fallback.style.position = 'fixed';
+            fallback.style.opacity = '0';
+            fallback.style.pointerEvents = 'none';
+            document.body.appendChild(fallback);
+            fallback.select();
+            try { copied = document.execCommand('copy'); } catch (_) { copied = false; }
+            fallback.remove();
+          }
+          if (copyStatus) {
+            copyStatus.textContent = copied ? 'تم نسخ الرقم بنجاح.' : 'تعذّر النسخ تلقائياً؛ الرقم هو +201224338495.';
+          }
+        });
+      }
+    })();
+  </script>
+
+</body>
+
+</html>
